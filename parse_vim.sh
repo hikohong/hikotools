@@ -21,7 +21,6 @@ if [ -n "$2" ]; then
     #remain PARSE_DB
     --rdb)
         PARSE_OPT="--REMAIN_DB"
-        echo "gogogo 1"
     ;;
     *)
         PARSE_OPT="--CLEAN_DB"
@@ -42,7 +41,6 @@ if [ $PARSE_OPT == "--CLEAN_DB" ]; then
     if  [ -d $PARSE_BK ]; then
         rm -rf $PARSE_BK
         mkdir $PARSE_BK
-        echo "gogogo 2"
     fi
 fi
 mv $PARSE_PATH/*.vim $PARSE_BK
