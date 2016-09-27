@@ -13,7 +13,7 @@ if  [ -d $PARSE_BK ]; then
     rm -rf $PARSE_BK
 fi
 mkdir $PARSE_BK
-mv ./unifi-video-firmware/openwrt-gen* $PARSE_BK
+mv ./unifi-video-firmware/openwrt-gen* $PARSE_BK/
 
 ./parse_vim.sh $PARSE_PATH --rdb
 

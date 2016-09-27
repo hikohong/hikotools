@@ -3,7 +3,6 @@
 CS_FILE=cscope.file
 PARSE_BK=~/parsing_bk
 PARSE_PATH=$1
-PARSE_OPT="--CLEAN_DB"
 
 if [ -z "$PARSE_PATH" ]; then
     #print usage
@@ -17,13 +16,19 @@ if [ -n "$2" ]; then
     case $2 in
     #clean PARSE_DB
     --cdb)
-    PARSE_OPT=--CLEAN_DB
+        PARSE_OPT="--CLEAN_DB"
     ;;
     #remain PARSE_DB
     --rdb)
-    PARSE_OPT=--REMAIN_DB
+        PARSE_OPT="--REMAIN_DB"
+        echo "gogogo 1"
+    ;;
+    *)
+        PARSE_OPT="--CLEAN_DB"
     ;;
     esac
+else
+    PARSE_OPT="--CLEAN_DB"
 fi
 
 ################
@@ -33,12 +38,13 @@ rm $PARSE_PATH/tags
 rm $PARSE_PATH/cscope*
 
 echo "backup data"
-if [ $PARSE_OPT=="CLEAN_DB" ]; then
+if [ $PARSE_OPT == "--CLEAN_DB" ]; then
     if  [ -d $PARSE_BK ]; then
         rm -rf $PARSE_BK
+        mkdir $PARSE_BK
+        echo "gogogo 2"
     fi
 fi
-mkdir $PARSE_BK
 mv $PARSE_PATH/*.vim $PARSE_BK
 
 #parsing process
@@ -58,7 +64,7 @@ cscope -bkq -i $CS_FILE
 
 echo "restore backup data"
 mv $PARSE_BK/*.vim $PARSE_PATH
-if [ $PARSE_OPT=="CLEAN_DB" ]; then
+if [ $PARSE_OPT == "CLEAN_DB" ]; then
     rm -rf $PARSE_BK
 fi
 
