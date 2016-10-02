@@ -51,12 +51,13 @@ GEN3M_IPADDRS=(
 
 if [ -n "$1" ]; then
     case $1 in
+    --nb)
+    build_process=false
+    ;;
+    #this should be in latest case of the switch
     -h|*)
     show_usage
     exit 1
-    ;;
-    --nb)
-    build_process=false
     ;;
     esac
 fi
