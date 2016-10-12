@@ -5,7 +5,7 @@ function show_usage()
     echo "==================================================================================="
     echo " Flash downloading processes"
     echo " Author hikohong"
-    echo "   ./build_all_uvc.sh CODEBASE_ROOT BUILD_OPTION DEPLOY_OPTION"
+    echo "   ./build_all_uvc.sh BUILD_OPTION DEPLOY_OPTION CODEBASE_ROOT"
     echo "   ./build_all_uvc.sh -h (call help)"
     echo "   Example:"
     echo "   ./build_all_uvc.sh"
@@ -84,6 +84,13 @@ if [ -n "$2" ]; then
         exit 1
         ;;
     esac
+fi
+
+if [ -n "$3" ]; then
+    CODEBASE_ROOT=$3
+    GEN2_BIN_PATH=$CODEBASE_ROOT/openwrt-gen2-dbg/artifacts
+    GEN3L_BIN_PATH=$CODEBASE_ROOT/openwrt-gen3l-dbg/artifacts
+    GEN3M_BIN_PATH=$CODEBASE_ROOT/openwrt-gen3m-dbg/artifacts
 fi
 
 #building gen2 gen3l and gen3m
