@@ -42,8 +42,9 @@ GEN3L_IPADDRS=(
 )
 
 GEN3M_IPADDRS=(
-"10.2.1.92"
 "10.2.1.134"
+"10.2.1.183"
+"10.2.1.92"
 "10.2.1.196"
 )
 
@@ -53,32 +54,35 @@ GEN3M_IPADDRS=(
 
 if [ -n "$1" ]; then
     case $1 in
-    --nb)
-    BUILD_PROCESS=false
-    ;;
-    -b)
-    BUILD_PROCESS=true
-    ;;
-    #this should be in latest case of the switch
-    -h|*)
+        --nb)
+        BUILD_PROCESS=false
+        ;;
+        -b)
+        BUILD_PROCESS=true
+        ;;
+        #this should be in latest case of the switch
+        -h|*)
+        show_usage
+        exit 1
+        ;;
+    esac
+else
     show_usage
     exit 1
-    ;;
-    esac
 fi
 
 if [ -n "$2" ]; then
     case $2 in
-    --dep)
-    DEPLOY_PROCESS=true
-    ;;
-    --nodep)
-    DEPLOY_PROCESS=false
-    ;;
-    *)
-    show_usage
-    exit 1
-    ;;
+        --dep)
+        DEPLOY_PROCESS=true
+        ;;
+        --nodep)
+        DEPLOY_PROCESS=false
+        ;;
+        *)
+        show_usage
+        exit 1
+        ;;
     esac
 fi
 
