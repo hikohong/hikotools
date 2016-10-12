@@ -43,6 +43,8 @@ GEN3L_IPADDRS=(
 
 GEN3M_IPADDRS=(
 "10.2.1.92"
+"10.2.1.134"
+"10.2.1.196"
 )
 
 ##############
@@ -52,7 +54,10 @@ GEN3M_IPADDRS=(
 if [ -n "$1" ]; then
     case $1 in
     --nb)
-    build_process=false
+    BUILD_PROCESS=false
+    ;;
+    -b)
+    BUILD_PROCESS=true
     ;;
     #this should be in latest case of the switch
     -h|*)
@@ -78,7 +83,7 @@ if [ -n "$2" ]; then
 fi
 
 #building gen2 gen3l and gen3m
-if [ "$BUILD_PROCESS" == "ture" ]; then
+if [ "$BUILD_PROCESS" == "true" ]; then
     make gen2-dbg/fw
     make gen3l-dbg/fw
     make gen3m-dbg/fw
