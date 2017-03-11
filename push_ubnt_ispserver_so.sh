@@ -1,5 +1,6 @@
 #!/bin/bash
-IP_ADDR=10.2.129.168
+IP_ADDR=10.2.129.16
+#IP_ADDR=10.2.129.206
 if [ $1 ]; then
     $IP_ADDR=$1
 #else
