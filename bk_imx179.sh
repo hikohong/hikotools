@@ -26,6 +26,8 @@ if [ -d $IMG_CACHE ]; then
 mkdir $IMG_CACHE
 echo "image cache folder created!"
 
+cp "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprietary/common/config/device-vendor.mk" $IMG_CACHE/
+
 cp "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprietary/mm-camera/mm-camera2/media-controller/modules/sensors/configs/imx179_chromatix.xml" $IMG_CACHE/
 
 cp -R "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprietary/mm-camera/mm-camera2/media-controller/modules/sensors/sensor/libs/imx179" $IMG_CACHE/
@@ -33,6 +35,8 @@ cp -R "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprieta
 cp -R "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprietary/mm-camera/mm-camera2/media-controller/modules/sensors/sensor/module" $IMG_CACHE/
 
 cp -R "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprietary/mm-camera/mm-camera2/media-controller/modules/sensors/chromatix/0309/chromatix_imx179" $IMG_CACHE/
+
+cp -R "/home/hikohong/Android/unifi-frontrow_RIGA_r17_sync/vendor/qcom/proprietary/mm-camera/mm-camera2/media-controller/modules/imglib/modules/llvd" $IMG_CACHE/
 
 
 tar jcvf $FILENAME $IMG_CACHE/
