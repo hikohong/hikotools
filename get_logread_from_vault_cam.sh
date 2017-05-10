@@ -2,9 +2,9 @@
 IP_ADDR_VAULT=192.168.1.10
 IP_ADDR_CAM=172.30.0.165
 if [ $1 ]; then
-    $IP_ADDR_VAULT=$1
-    if [ $1 ]; then
-        $IP_ADDR_CAM=$2
+    IP_ADDR_VAULT=$1
+    if [ $2 ]; then
+        IP_ADDR_CAM=$2
     fi
 #else
 #    show_usage
