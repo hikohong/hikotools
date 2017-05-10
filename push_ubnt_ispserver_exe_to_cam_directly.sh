@@ -7,7 +7,7 @@ G3M_ISPSERVER_CODE_PATH=/home/hikohong/Android/unifi-video-fw_sync/unifi-video-f
 ISPSERVER_CODE_PATH=$G3M_ISPSERVER_CODE_PATH
 CMAKE_DIR=/home/hikohong/Android/unifi-video-fw_sync/unifi-video-firmware/packages-other/ubnt-middleware/unifi-video-fw-middleware
 if [ $1 ]; then
-    IP_ADDR_CAM=$2
+    IP_ADDR_CAM=$1
     if [ $2 ]; then
        case $2 in
            gen2)
