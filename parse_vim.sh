@@ -54,6 +54,7 @@ find $PARSE_PATH -name "*.aidl" \
     -o -name "*.cpp" \
     -o -name "*.java" \
     -o -name "*.mk" \
+    -o -name "*.m" \
     > $CS_FILE
 ctags -R --exclude=.svn --exclude=.git --exclude=.vim --exclude=out
 cscope -bkq -i $CS_FILE
