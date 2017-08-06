@@ -1,0 +1,33 @@
+#directory cmds
+alias ls='ls -G'
+alias ll='ls -la'
+alias l='ls'
+alias s='cd ..'
+alias cdo='cd $OLDPWD'
+
+#cli screen
+cat ~/Pictures/wallpapers/snoopy66.txt
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+    xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+    *)
+    ;;
+esac
+#export PS1='\[\e[0;32m\]\u@\H[\[\e[1;34m\]\w\[\e[0;32m\]]\[\e[1;32m\]\$ \[\e[1;37m\]'
+
+#ubnt tools
+export UBNT_CACHE_DIR=$HOME/ubnt_cache_dir
+export DLDIR=$HOME/dl
+export UBNT_MIDDLEWARE_LOCAL=on
+export LC_CTYPE=
+export PATH=/usr/lib/ccache:$PATH:/usr/local/linaro-multilib-2014.06-gcc4.9/bin/
+ccache --max-size=10G -s > /dev/null 2>&1
+#export UBNT_SECURITY="off"
