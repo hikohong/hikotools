@@ -1,3 +1,5 @@
+#This file is for .bashrc type's add-on cmd
+
 #directory cmds
 alias ls='ls -G'
 alias ll='ls -la'

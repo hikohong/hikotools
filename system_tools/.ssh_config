@@ -1,0 +1,10 @@
+#This is for ssh cmd as ~/.ssh/config add-on
+
+Host 10.*.*.*
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  #KexAlgorithms +diffle-hellman-group1=sha1
+
+Host 192.168.*.*
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
