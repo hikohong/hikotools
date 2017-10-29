@@ -1,3 +1,5 @@
+#hiko modification {
+
 #This file is for .bashrc type's add-on cmd
 
 #directory cmds
@@ -33,3 +35,5 @@ export LC_CTYPE=
 export PATH=/usr/lib/ccache:$PATH:/usr/local/linaro-multilib-2014.06-gcc4.9/bin/
 ccache --max-size=10G -s > /dev/null 2>&1
 #export UBNT_SECURITY="off"
+
+#hiko modification }
