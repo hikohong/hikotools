@@ -36,4 +36,8 @@ export PATH=/usr/lib/ccache:$PATH:/usr/local/linaro-multilib-2014.06-gcc4.9/bin/
 ccache --max-size=10G -s > /dev/null 2>&1
 #export UBNT_SECURITY="off"
 
+#add for powerline
+#export POWERLINE_PATH=/usr/local/lib/python3.6/site-packages/powerline
+#source $POWERLINE_PATH/bindings/bash/powerline.sh
+
 #hiko modification }
