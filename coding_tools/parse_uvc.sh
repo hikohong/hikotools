@@ -18,5 +18,6 @@ mv ./unifi-video-firmware/openwrt-gen* $PARSE_BK/
 ./parse_vim.sh $PARSE_PATH --rdb
 
 mv $PARSE_BK/openwrt-gen* ./unifi-video-firmware/
+rm -rf $PARSE_BK
 
 
