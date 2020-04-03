@@ -1,4 +1,6 @@
 #!/bin/bash
+# ex
+# ./parse_vim.sh <PATH> --rdb
 
 CS_FILE=cscope.file
 PARSE_BK=~/parsing_bk
