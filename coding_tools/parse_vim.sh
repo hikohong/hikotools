@@ -55,6 +55,7 @@ find $PARSE_PATH -name "*.aidl" \
     -o -name "*.c" \
     -o -name "*.cpp" \
     -o -name "*.java" \
+    -o -name "*.js" \
     -o -name "*.mk" \
     -o -name "*.m" \
     > $CS_FILE
